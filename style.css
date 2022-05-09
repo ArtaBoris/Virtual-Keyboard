@@ -1,9 +1,7 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
+    padding: 0; 
 }
 
 :root {
@@ -16,8 +14,6 @@
 }
 
 body {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
     color: whitesmoke;
 }
 
@@ -31,7 +27,6 @@ body {
     border: black solid 2px;
     border-radius: 5px;
     font-size: 18px;
-    font-family: inherit;
 }
 
 .wrapper {
@@ -45,7 +40,6 @@ body {
     padding: 10px;
     border-radius: 5px;
     font-size: 22px;
-    font-weight: 500;
 }
 
 .first-row, 
@@ -109,7 +103,8 @@ body {
     width: 130px;
 }
 
-.addition {
+.switch {
     text-align: center;
     margin: 20px;
+    color: black;
 }
