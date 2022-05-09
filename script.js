@@ -89,7 +89,7 @@ function showContent() {
                                 <div class="key control-key" id="ControlRight">ctrl</div>
                             </div>
                         </div>
-                        <p class="switch">switch keyboard layout left ctrl + left alt<p>
+                        <p class="switch">switch keyboard layout left ctrl + left alt</p>
                     </div>`;
 
   body.insertAdjacentHTML('afterbegin', content);
