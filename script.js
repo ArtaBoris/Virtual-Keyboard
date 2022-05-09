@@ -1,7 +1,7 @@
 import Translate from './translate.js';
 
 const DEFAULT_LANG = 'en';
-let language = localStorage.getItem('language');
+let language = localStorage.getItem('language') || DEFAULT_LANG;
 
 let isCapsLocked = false;
 
@@ -89,6 +89,7 @@ function showContent() {
                                 <div class="key control-key" id="ControlRight">ctrl</div>
                             </div>
                         </div>
+                        <p class="switch">switch keyboard layout left ctrl + left alt<p>
                     </div>`;
 
   body.insertAdjacentHTML('afterbegin', content);
@@ -106,6 +107,7 @@ const altLeft = document.querySelector('#AltLeft');
 
 
 const textarea = document.querySelector('.textarea');
+const keyboard = document.querySelector('.keyboard');
 
 function saveToLocalStorage() {
   localStorage.setItem('language', language);
@@ -384,5 +386,13 @@ function releaseKey(e) {
 
 document.addEventListener('keydown', pressKey);
 document.addEventListener('keyup', releaseKey);
+
+
+function identifyKey(e) {
+  const key = e.target;
+  determinePressedKey(key);
+}
+
+keyboard.addEventListener('click', identifyKey);
 
 getTranslate();

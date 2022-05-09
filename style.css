@@ -109,7 +109,8 @@ body {
     width: 130px;
 }
 
-.addition {
+.switch {
     text-align: center;
     margin: 20px;
+    color: black;
 }
